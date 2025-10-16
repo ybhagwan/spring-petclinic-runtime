@@ -1,0 +1,12 @@
+---
+applications:
+- name: spring-petclinic
+  memory: 1G
+  random-route: true
+  path: target/spring-petclinic-3.5.0-SNAPSHOT.jar
+#  services:
+#  - petclinic-pg
+  env:
+    JBP_CONFIG_SPRING_AUTO_RECONFIGURATION: '{enabled: false}'
+    SPRING_PROFILES_ACTIVE: http2,postgres
+    JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 17.+ } }'
